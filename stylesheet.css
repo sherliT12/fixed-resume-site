@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+/* CSS for Project 1B Resume Website
+
+Colours:
+- Royal blue (main): #242669
+- Blue (aside links): #2A58A8
+- Gold (nav links and highlight): #C2972F
+- Light blue (background): #CBE1EC
+- Mid blue (aside background): #BFDBEA
+- Sky blue (download button): #9FDDF6
+- Transparent: #ffffff00
+
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+
+/* Basic browser defaults */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid and Element Layout
+- Base and global Styles
+- Typography and Bullet Styles
+- Links and Navigation styles
+*/
+
+
+
+/* Grid and Element Layout
+––––––––––––––––––––––––––––––––––––––––––––––––––
+  .container, header, nav, .wrap, .main, .aside, footer
+*/
+
+
+.container {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto; /*centers the container in the broswer window */
+  overflow: auto;
+}
+
+
+header {
+  width: 960px;
+  height: 400px;
+  background-image: url("img/head-background.png");
+  background-repeat: no-repeat;
+  background-size: 960px 400px;
+  float: left;
+}
+
+
+nav {
+  text-align: center;
+  float: left;
+}
+
+
+/* Wraps around .main and .aside so that both
+will have the same height regardless of content.
+Ref from Stackoverflow question id 59126362 */
+.wrap{
+  display: flex;
+  width: 100%;
+}
+
+
+/* Main text body is in this div */
+.main {
+  width: 70%;
+  margin: 0;
+  float: left;
+  background: rgb(255, 255, 255, 0.6);
+  padding: 0 20px 75px;
+  box-sizing: border-box;
+}
+
+
+.aside{
+  display: block;
+  width: 30%;
+  margin: 0;
+  padding: 20px 10px 180px 20px;
+  box-sizing: border-box;
+  float: right;
+  background-color: #BFDBEA;
+  overflow: hidden;
+}
+
+
+footer {
+  width: 960px;
+  margin: 0;
+  font-size: 10pt;
+  color: #fff;
+  line-height: 12pt;
+  text-align: center;
+  padding-top: 100px;
+
+  float: left;
+  background-image: url("img/foot-background.png");
+  background-repeat: no-repeat;
+  background-size: 960px 150px;
+
+  clear: both;
+}
+
+
+
+/* Base and global Styles
+––––––––––––––––––––––––––––––––––––––––––––––––––
+  body, .center, nav, form, textarea
+*/
+
+
+body {
+  min-height: 100%;
+  font-size: 14pt;
+  font-family: Garamond, serif, 'Times New Roman', Georgia;
+  background: #CBE1EC;
+}
+
+
+/* Centers logo image
+Ref from Stackoverflow question id 34908332 */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+}
+
+
+nav {
+  background-color: #fff;
+  overflow: hidden;
+  width: 960px;
+  height: 50px;
+}
+
+
+form {
+  text-align: right;
+}
+
+
+textarea {
+  resize: none;
+  margin-right: 5px;
+}
+
+
+/* Typography & Bullet Styles
+––––––––––––––––––––––––––––––––––––––––––––––––––
+    h1, h2, h3, h4, p.header-lead, .button, ul.aside-list, ul.skills-list, li.skills-line
+*/
+
+
+/* used in header */
+h1 {
+  color: #fff;
+  font-size: 60pt;
+  text-align:center;
+  line-height: 40px;
+  font-weight: normal;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+
+/* used in page headings */
+h2 {
+  font-size: 30pt;
+  font-weight: normal;
+  color: #C2972F;
+  text-align: center;
+  letter-spacing: 1pt;
+  margin-bottom: 5px;
+}
+
+
+/* used in article headings */
+h3 {
+  font-size: 20pt;
+  font-weight: normal;
+  color: #000;
+  letter-spacing: 0.5pt;
+  background: url("img/heading-icon.png") no-repeat;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+
+/* used in aside */
+h4 {
+  height: 40px;
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: right;
+  color: #242669;
+  border-right: 7px solid #242669;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* Paragraph styling for header subtitle */
+p.header-lead {
+  color: #fff;
+  font-size: 15pt;
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* Form button styling */
+.button {
+    font-size: 18px;
+    font-family: Garamond, serif, 'Times New Roman', Georgia;
+    margin-right: 10px;
+}
+
+
+/* Styling for aside list */
+ul.aside-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+
+/* Styling for skills list in about_me page */
+ul.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 5px 20px;
+  text-align: left;
+}
+
+
+/* Styling for each line in skills list */
+li.skills-line {
+  height: 40px;
+  background: url("img/gold-label.png") no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+  padding: 5px 40px;
+}
+
+
+
+/* Links and Navigation
+––––––––––––––––––––––––––––––––––––––––––––––––––
+  li a, li a:hover, a, a:hover, nav a, nav a:hover, nav a.active, .plainlinks, .plainlinks:hover
+*/
+
+
+/* ----- List style Links ------- */
+
+li a {
+  color: #2A58A8;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #2A58A8;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, #ffffff00 50%, #FFF 50%);
+  padding-left: 25px;
+  border-bottom: 2px solid #fff;
+}
+
+
+li a:hover {
+  color: #000;
+  border-bottom: 2px solid #C2972F;
+}
+
+
+/* ----- Normal link styes, for Contacts ------- */
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C2972F;
+  text-decoration-color: #C2972F;
+}
+
+
+/* ----- Nav bar style links ------- */
+
+nav a {
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+  border-bottom: 5px solid #C2972F;
+}
+
+nav a.active {
+  background-color: #C2972F;
+  color: white;
+  border-bottom: solid #C2972F;
+}
+
+
+/* ----- Button style links, for PDF download ------- */
+
+.plainlinks {
+  color: #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+  text-align: center;
+  width: 130px;
+  background-color: #9FDDF6;
+  border-radius: 2px;;
+}
+
+
+.plainlinks:hover {
+  background-color: #C2F0FF;
+  text-decoration: underline;
+}
